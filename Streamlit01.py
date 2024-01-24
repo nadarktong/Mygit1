@@ -17,5 +17,22 @@ with col3:
     st.header("Setora")
     st.image("https://upload.wikimedia.org/wikipedia/commons/4/41/Iris_versicolor_3.jpg")
 
-df=pd.read_csv("./Data/iris.csv")
-st.write(df.head(10))
+if(st.button("แสดงข้อมูลตัวอย่าง")):
+       st.write(df.head(10))
+   st.button("ไม่แสดงตัวอย่าง")
+else:
+    st.button("ไม่แสดงข้อมูลตัวอย่าง")
+
+
+if(st.button("แสดงกราฟแท่ง")):
+    chart_data = pd.DataFrame(
+    {
+        "ประเภทดอกไม้": df['variety'],
+        "ความกว้าง": df['sepal.width'],
+        "ความยาว": df['sepal.length']    
+        }
+    )
+    st.bar_chart(chart_data, x="ประเภทดอกไม้", y=["ความกว้าง","ความยาว"], color=["#FF0000", "#0000FF"])
+    st.button("ไม่แสดงกราฟแท่ง")
+else:
+    st.button("ไม่แสดงกราฟแท่ง")
