@@ -16,3 +16,6 @@ with col2:
 with col3:
     st.header("Setora")
     st.image("https://upload.wikimedia.org/wikipedia/commons/4/41/Iris_versicolor_3.jpg")
+
+df=pd.read_csv("./Data/iris.csv")
+st.write(df.head(10))
