@@ -56,6 +56,9 @@ ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
         shadow=True, startangle=90)}
 #ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 
-    st.pyplot("ไม่แสดงกราฟวงกลม")
+if(st.button("แสดงข้อมูล")):
+    st.pyplot(fig1)
+    st.button("ไม่แสดงข้อมูล")
+
 else:
-    st.pyplot("ไม่แสดงกราฟวงกลม")
+    st.button("ไม่แสดงข้อมูล")
