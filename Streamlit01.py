@@ -18,8 +18,8 @@ with col3:
     st.image("https://upload.wikimedia.org/wikipedia/commons/4/41/Iris_versicolor_3.jpg")
 
 if(st.button("แสดงข้อมูลตัวอย่าง")):
-       st.write(df.head(10))
-   st.button("ไม่แสดงตัวอย่าง")
+    st.write(df.head(10))
+    st.button("ไม่แสดงตัวอย่าง")
 else:
     st.button("ไม่แสดงข้อมูลตัวอย่าง")
 
